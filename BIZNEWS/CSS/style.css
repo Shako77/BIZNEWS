@@ -1,0 +1,1145 @@
+/***************************************
+*BIZNEWS CLONE ONLY HTML&CSS ***NO JS***
+*AUTHOR SHAKO MIKHELIDZE
+*EXERCISE FOR EXPERIENCE
+************************/
+/**************************************************
+I HAVE NOT LEARNED,
+SO THE PAGE DOES NOT HAVE MEDIA QUERIES,
+BUT IT CAN BE SAID THAT IT IS PARTIALLY RESPONSIVE.
+***************************************************/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  background-color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+  --black: #1e2024;
+  --grey: #9a9da2;
+  --yellow: #ffcc00;
+  --texts: #31404b;
+  --white: #edeff4;
+  --light: #ffff;
+  --borders: #dee2e6;
+  --lighttexts: #a6a9ad;
+}
+.top {
+  height: 50px;
+  max-width: 100%;
+  background-color: var(--black);
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 48px 16px 48px;
+  max-width: 100%;
+  background-color: var(--light);
+}
+/****
+LOGO*/
+.logo > a {
+  height: auto;
+  display: flex;
+  text-transform: uppercase;
+}
+.logo {
+  padding: 8px 16px 8px 16px;
+}
+.logo-colory {
+  color: var(--yellow);
+  font-size: 40pt;
+  letter-spacing: 3px;
+}
+.logo-colorg {
+  color: #31404b;
+  font-weight: 100;
+  font-size: 40pt;
+  letter-spacing: 3px;
+}
+/***
+ADD*/
+.add {
+  padding: 0 8px 0 8px;
+}
+.add > img {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+/***************
+NAVIGATION BAR*/
+.nav-container {
+  background-color: var(--black);
+  max-width: 100%;
+  height: auto;
+  padding: 0 48px 0 48px;
+  position: relative;
+}
+.positioning {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px 0 16px;
+}
+.navigation-bar {
+  max-width: 100%;
+}
+.navigation-bar > ul {
+  display: flex;
+}
+.navigation-bar > ul > li {
+  padding: 20px 15px 20px 15px;
+}
+.navigation-bar > ul > li > a {
+  color: #fff;
+  text-transform: uppercase;
+}
+/*************
+DROPDOWN MENU*/
+.dropdown {
+  position: relative;
+}
+.dropdown:hover .list {
+  display: block;
+}
+.list {
+  position: absolute;
+  top: 58px;
+  left: 0px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 8px 0px 8px 0px;
+  width: 138px;
+  display: none;
+  background-color: #fff;
+  z-index: 1;
+}
+.list > li {
+  padding: 6px 24px 6px 24px;
+}
+.list > li:hover {
+  background-color: #f8f9fa;
+}
+.list > li > a {
+  color: #212529;
+}
+/***********************************************
+FIRST NAVIGATION ELEMENT ACTIVE + NAV BAR HOVER*/
+.active {
+  background-color: var(--yellow);
+  color: black !important;
+}
+.navigation-bar > ul > li:hover {
+  background-color: var(--yellow);
+  transition: 0.1s linear;
+}
+/*****************************************
+INPUT CONTAINER, SEARCH AND SEARCH BUTTON*/
+.input-container {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.search {
+  height: 38px;
+  width: 80%;
+  padding: 6px 12px;
+  border: none;
+  outline: none;
+  font-size: 12pt;
+  color: #676d73;
+}
+.search:focus {
+  outline: 3.5px solid rgba(255, 204, 0, 0.3);
+  transition: 0.05s linear;
+}
+.searchbtn {
+  padding: 6px 16px 6px 16px;
+  height: 38px;
+  width: 20%;
+  border: none;
+  outline: none;
+  background-color: var(--yellow);
+}
+.for-font-size{
+  font-weight: bold;
+  font-size: 12pt;
+}
+/************
+NEWS SECTION*/
+.news-row {
+  display: flex;
+  height: 500px;
+}
+/*************************
+MAIN NEWS, MAIN CONTAINER*/
+.main-news {
+  width: 58%;
+  height: 500px;
+  position: relative;
+}
+/*****
+IMAGE*/
+.news-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/**************
+MAIN NEWS TEXT*/
+.text-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 30px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #1e2024);
+}
+/***********************
+4 TEXT BUTTON ONLE STYLE*/
+.btn-date {
+  display: flex;
+}
+/********************
+SMALL YELLOW BUTTON*/
+.buisness {
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  background-color: var(--yellow);
+  height: 28px;
+  width: 78px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+/*************************
+SMALL YELLOW ACTIVE AFFECT*/
+.buisness:active {
+  outline: 3.5px solid rgba(255, 204, 0, 0.3);
+  transition: 0.05s linear;
+}
+/******************************************************
+BEFORE PESUDO CLASSES FOR TRANSPARENT EFFECT AFTER HOVER */
+.buisness::before {
+  content: "";
+  position: absolute;
+  background-color: #212529;
+  height: 28px;
+  width: 78px;
+  opacity: 0;
+  padding: 8px;
+}
+.buisness:hover:before {
+  opacity: 0.2;
+}
+.buisness > a {
+  color: var(--black);
+  margin: 8px;
+}
+/**************************************
+SMALL BUISNES BUTTONS FOR WEBSITE MAIN*/
+.small {
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  background-color: var(--yellow);
+  height: 20px;
+  width: 70px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+/*************************
+SMALL YELLOW ACTIVE AFFECT*/
+.small:active {
+  outline: 3.5px solid rgba(255, 204, 0, 0.3);
+  transition: 0.05s linear;
+}
+/******************************************************
+BEFORE PESUDO CLASSES FOR TRANSPARENT EFFECT AFTER HOVER */
+.small::before {
+  content: "";
+  position: absolute;
+  background-color: #212529;
+  height: 20px;
+  width: 70px;
+  opacity: 0;
+  padding: 4px;
+}
+.small:hover:before {
+  opacity: 0.2;
+}
+/*****
+DATE*/
+.date {
+  margin-left: 10px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.date:hover {
+  text-decoration: underline;
+}
+.flexdate {
+  font-size: 10pt;
+  color: #fff;
+}
+/****************
+LOREM IPSUM TEXT*/
+.lorem {
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 25pt;
+  color: #fff;
+  margin-top: 10px;
+  line-height: 35px;
+}
+.lorem:hover {
+  text-decoration: underline;
+}
+.ipsum {
+  width: 90%;
+  font-size: 12pt;
+  line-height: normal;
+}
+/*****************
+FLEXBOX CONTAINER*/
+.flex-news {
+  display: flex;
+  flex-wrap: wrap;
+  width: 42%;
+}
+/****************************
+4 flexed IMAGE CONTAINER ONE STYLE*/
+.sq1 {
+  width: 50%;
+  height: 50%;
+  margin: 0;
+  position: relative;
+}
+/*****************
+4 IMAGE, ONE STYLE*/
+.sqi1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*********************
+BREAKING NEWS SECTION*/
+.breaking-news-main-container {
+  background-color: var(--black);
+  color: #fff;
+  max-width: 100%;
+  padding: 16px 8px 16px 8px;
+}
+.breaking-news-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.breaking-news-logo {
+  height: 40px;
+  width: 155px;
+  background-color: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15pt;
+  text-transform: capitalize;
+  color: var(--black);
+}
+.breaking-news {
+  margin-left: 15px;
+  font-size: 15pt;
+  text-transform: uppercase;
+}
+/********************************
+FEATURED NEWS STYLING STRAT HERE*/
+.featured-main-container {
+  margin: 16px 0 16px 0;
+  padding: 48px 8px 0 8px;
+  max-width: 100%;
+}
+.fnm-container {
+  max-width: 75%;
+  margin: 0 85px 0 85px;
+  position: relative;
+  margin: 0 auto;
+}
+/*********************
+FEATURED NEWS CONTAINER + TEXT STYLING*/
+.fn-container {
+  border: 1px solid var(--borders);
+  padding: 15px;
+  margin-bottom: 15px;
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: var(--light);
+}
+.fn-container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 4px;
+  background-color: var(--yellow);
+}
+.fn-container > h1 {
+  text-transform: uppercase;
+  color: var(--texts);
+}
+/*********************************************************
+FEATURED NEWS ITEMS CONTAINER WITH IMAGES AND INFORMATION
+*/
+.news-item-container {
+  display: flex;
+  margin-top: 15px;
+}
+/*************************************************************
+*position relative* for For the positioning of the above styles, 
+since the above styles are *position absolute*,
+ the element will be spread across the entire screen.
+Reading the comment below is necessary to realize this*/
+.item {
+  width: 25%;
+  height: 300px;
+  position: relative;
+}
+.itemimg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mar {
+  margin-right: 30px;
+}
+/***********************************************************************************************
+In this section, I need the same styles for the text that I needed for the flexbox photos above, 
+so I won't write them again and I'll just assign the same class to make things easier, 
+I'll also write the numbers of the lines where these styles are written.
+*buisness button styling with hover, before, active effect *FROM LINE 196 TO LINE 230*
+*date styling *FROM LINE 233 TO LINE 245*
+*lorem ipsum text styling *FROM LINE 248 TO LINE 264*
+*****************************************************/
+
+/**********************************************
+AND... FINALY WEBSITE MAIN SECTION START HERE*/
+.all-positioning-container {
+  max-width: 100%;
+  height: 2235px;
+  display: flex;
+}
+/**************************
+LATEST NEWS MAIN CONTAINER*/
+.all-main-iner {
+  width: 75%;
+  height: 1900px;
+  margin: 0 auto;
+  display: flex;
+}
+.latest-news-iner {
+  width: 66%;
+  height: 300px;
+}
+/****************************
+LATEST NEWS HEADER CONTAINER*/
+.latest-news-header-iner {
+  padding: 0 8px 0 8px;
+}
+/******************
+LATEST NEWS HEADER*/
+.ltsnews-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--light);
+  padding: 15px;
+  position: relative;
+}
+/******************************************************
+BEFORE PESUDO FOR SMALL YELLOW LINE START OF CONTAINER*/
+.ltsnews-header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--yellow);
+  height: 100%;
+  width: 4px;
+}
+.ltsnews-header > h1 {
+  text-transform: uppercase;
+  color: var(--texts);
+  font-size: 17pt;
+}
+.ltsnews-header > a {
+  text-transform: capitalize;
+  color: var(--texts);
+  font-size: 13pt;
+}
+
+.latest-news-container {
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.news-square1 {
+  width: 50%;
+  padding: 0 8px 0 8px;
+}
+.news-square2 {
+  width: 50%;
+  padding: 0 8px 0 8px;
+}
+.nws-img-iner {
+  height: 226px;
+  max-width: 100%;
+}
+.ltsnews-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ltnewss-text-iner {
+  height: 282px;
+  width: 100%;
+  background-color: var(--light);
+}
+/**************************************
+TEXT CONTAINER UNDER LATEST NEWS IMAGE*/
+.ltnewss-text-iner {
+  max-width: 100%;
+  height: 230px;
+  padding: 25px;
+  border-left: 1px solid var(--borders);
+  border-right: 1px solid var(--borders);
+}
+/************************
+BUTTON AND DATE CONTAINER
+*/
+.lates-news {
+  color: var(--lighttexts);
+}
+/*************************
+LOREM IPSUM TEXT CONTAINER
+*/
+.ltsnws-lorem-txet-inner {
+  margin: 8px 0 16px 0;
+  width: 100%;
+  font-size: 20pt;
+}
+.ltsnws-lorem-txet-inner > a {
+  color: var(--texts);
+  font-weight: bold;
+}
+.ltsnws-lorem-txet-inner > a:hover {
+  text-decoration: underline;
+}
+/****************************************
+LATEST NEWS INFORMATION CONTAIER STYLING*/
+.ltsnws-information-iner {
+  width: 100%;
+  font-size: 14pt;
+  color: var(--lighttexts);
+}
+/***********************************
+AUTHOR CONTAINER STYLING START HERE*/
+.author-inner {
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid var(--borders);
+  background-color: var(--light);
+}
+.img-author-name,
+.icons {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: var(--lighttexts);
+}
+.author {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+/**********************
+ICONS, EYE AND COMMENT*/
+.fa-eye,
+.fa-comment {
+  margin-left: 16px;
+  color: var(--lighttexts);
+}
+/******************
+ADD IN WEBSITE MID*/
+.mid-add {
+  width: 800px;
+  margin: 15px 0 15px 0;
+}
+.mid-add-img {
+  width: 100%;
+}
+/********************
+FLEX NEWS CONTAINERS*/
+.flex-main-iner {
+  max-width: 100%;
+  padding: 0 8px 0 8px;
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+.pos-iner {
+  display: flex;
+  flex-direction: column;
+}
+/***********************************
+FIRST TWO CONTAINERS MAIN CONTAINER*/
+.flex-iner1 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.first-item {
+  display: flex;
+  height: 110px;
+  width: 100%;
+  border: 1px solid var(--borders);
+}
+/*****
+IMAGE*/
+.fimg-iner {
+  width: 160px;
+}
+.fimage {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+/*****
+TEXTS*/
+.fbtn-text-iner {
+  padding: 0 16px 0 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--light);
+}
+.lorem-text-iner {
+  color: var(--texts);
+  font-weight: bold;
+}
+.lorem-text-iner > a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+/****************************
+FOR BUTTON CONATINER MARGIN*/
+.mrgn {
+  margin-bottom: 8px;
+}
+/***********************************
+SECOND TWO CONTAINERS MAIN CONTAINER*/
+.flex-iner2 {
+  width: 50%;
+  height: 300px;
+}
+.addd {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 4px 0 4px;
+}
+.last-news-main-positioning-container {
+  margin-top: 16px;
+  width: 100%;
+}
+
+/*LAST NEWS MAIN CONTAINER + IMAGE*/
+.ll-main-iner {
+  max-width: 100%;
+  height: 350px;
+  margin-top: 16px;
+  display: flex;
+  padding: 0 8px 0 8px;
+}
+.ll-img-iner {
+  max-width: 50%;
+}
+.ll-img-iner > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/***********
+TEXTED NEWS*/
+.ll-text-news-iner {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--borders);
+  background-color: var(--light);
+}
+.last {
+  border: none;
+  border-top: 1px solid var(--borders);
+}
+.for-pos-iner {
+  margin: 23px 0px 23px 0px;
+}
+.lorem-ll-iner {
+  width: 90%;
+  color: var(--lighttexts);
+}
+.ll {
+  border: none;
+}
+
+/*******************
+ASIDE MAIN COTAINER*/
+.aside-iner {
+  width: 34%;
+  padding: 0 8px 0 8px;
+}
+/***********************
+ASIDE HEADER *FOLLOW US*/
+.aside-header {
+  padding: 15px;
+  background-color: var(--light);
+  position: relative;
+  border: 1px solid var(--borders);
+}
+/******************************************************
+BEFORE PESUDO FOR SMALL YELLOW LINE START OF CONTAINER*/
+.aside-header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--yellow);
+  height: 100%;
+  width: 4px;
+}
+/**************
+FOLLOW US TEXT*/
+.aside-header > h1 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--texts);
+  font-size: 17pt;
+  font-weight: bold;
+}
+/************
+SOCIAL MEDIA*/
+.soc-media-main-iner {
+  padding: 16px;
+  border: 1px solid var(--borders);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light);
+}
+/***********************************
+SOCIAL MEDIA  CONTAINER ONE FOR ALL*/
+.soc {
+  display: flex;
+  height: 64px;
+}
+/******************
+BACKGROUND COLORING*/
+.f-back-color {
+  background-color: #39569e;
+  border: 1px solid #39569e;
+}
+.f-icon-color {
+  background-color: #2e457f;
+}
+/*TWITTER*/
+.tw-back-color {
+  background-color: #52aaf4;
+  border: 1px solid #52aaf4;
+}
+.tw-icon-color {
+  background-color: #4288c3;
+}
+/*LINKEDIN*/
+.li-back-color {
+  background-color: #0185ae;
+  border: 1px solid #0185ae;
+}
+.li-icon-color {
+  background-color: #016b8b;
+}
+/*INSTAGRAM*/
+.ins-back-color {
+  background-color: #c8359d;
+  border: 1px solid #c8359d;
+}
+.ins-icon-color {
+  background-color: #a02a7e;
+}
+/*YOUTUBE*/
+.yt-back-color {
+  background-color: #dc472e;
+  border: 1px solid #dc472e;
+}
+.yt-icon-color {
+  background-color: #b03925;
+}
+/*VIMEO*/
+.vi-back-color {
+  background-color: #055570;
+  border: 1px solid #055570;
+  margin: 0 !important;
+}
+.vi-icon-color {
+  background-color: #04445a;
+}
+/*****************************
+SOCIAL MEDIA ICON POSITIONING*/
+.soc-icon-iner,
+.soc-icon {
+  display: flex;
+  align-items: center;
+  color: var(--light);
+  width: 100%;
+}
+.soc-icon-iner {
+  height: 64px;
+  width: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*********************************
+FOR SOCIAL MEDIA CONTAINER MARGIN*/
+.ma {
+  margin-bottom: 16px;
+}
+/***********
+ICON MARGIN*/
+.icon-mr {
+  padding: 16px 16px 16px 16px;
+  margin: 0 auto;
+}
+/******************************
+FOR TEXTS,FAN,FOLOWER AND MORE*/
+.num {
+  margin-left: 16px;
+  text-transform: capitalize;
+}
+
+.adv-main-iner {
+  border: 1px solid var(--borders);
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  background-color: var(--light);
+}
+.adv-iner {
+  border-bottom: 1px solid var(--borders);
+  padding: 15px;
+  position: relative;
+}
+.adv-iner > h1 {
+  text-transform: uppercase;
+  color: var(--texts);
+  font-size: 17pt;
+}
+.adv-iner:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--yellow);
+  height: 100%;
+  width: 4px;
+}
+.adv-img-iner {
+  padding: 16px;
+}
+.adv-img {
+  width: 100%;
+  height: 100%;
+}
+/****************************
+TRANDING NEWS MAIN CONTAINER*/
+.tranding-news-iner {
+  margin: 16px 0 16px 0;
+  border: 1px solid var(--borders);
+  background-color: var(--light);
+}
+.tranding-news-images-iner {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+/***************************************************************************************
+ASIDE IMAGE IS ALREADY STYLED, I DONT REPEAT THIS STYLE AGAIN, JUST CHANGE LITTLE THINGS*/
+.for-aside-lorem {
+  width: 90%;
+}
+.for-aside-lorem:hover {
+  text-decoration: underline;
+}
+/********************************
+NEWSTELER MAIN CONTAINER STYLING*/
+.new-iner {
+  margin: 16px 0 16px 0;
+  border: 1px solid var(--borders);
+  background-color: var(--light);
+}
+.email-input-iner {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.email-input-iner > p {
+  width: 90%;
+  text-align: center;
+  line-height: 20px;
+  font-size: 13pt;
+  margin-bottom: 16px;
+  color: var(--lighttexts);
+}
+/************************
+LAST LOREM TEXT STYILING*/
+.lorem-txtp {
+  font-size: 10pt;
+  color: var(--lighttexts);
+  text-align: center;
+  margin-top: 16px;
+}
+/**********************************************
+EMAIL MAIN CONTAINER AND EMAIL, BUTTON STYLING*/
+.email-main-iner {
+  display: flex;
+  max-width: 100%;
+}
+.email {
+  height: 48px;
+  width: 70%;
+  padding: 8px 16px;
+  border: none;
+  outline: none;
+  font-size: 16pt;
+  color: #676d73;
+  text-transform: capitalize;
+  border: 1px solid var(--borders);
+}
+.email:focus {
+  outline: 3.5px solid rgba(255, 204, 0, 0.3);
+  transition: 0.05s linear;
+}
+.sing-upbtn {
+  width: 30%;
+  padding: 6px 16px;
+  background-color: var(--yellow);
+  border: none;
+  outline: none;
+}
+.sing-upbtn > a {
+  font-size: 13pt;
+  text-transform: capitalize;
+  color: var(--texts);
+  font-weight: bold;
+}
+.sing-upbtn:active {
+  outline: 3.5px solid rgba(255, 204, 0, 0.3);
+  transition: 0.05s linear;
+}
+/****
+TAGS*/
+.tags-main-iner {
+  border: 1px solid var(--borders);
+  background-color: var(--light);
+}
+.tags-positioning-iner {
+  width: 104%;
+}
+.tags-iner {
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.tag {
+  margin: 4px;
+  padding: 4px 8px;
+  border: 1px solid var(--texts);
+  color: var(--texts);
+}
+.tag:hover {
+  transition: 0.1s ease-in;
+  background-color: var(--texts);
+  color: var(--light);
+}
+.tag:focus{
+  outline: 3.5px solid rgba(49, 64, 75, .5);
+}
+/*******************
+FOOTER START HERE*/
+.footer-main-iner {
+  max-width: 100%;
+  background-color: var(--black);
+  margin-top: 48px;
+  padding: 48px;
+}
+/***********************************************************************************
+4 ITEMSS MAIN CONTAINERS, GET IN TOUCH, POPULAR NEWS, CATEGORIES AND FLICKER PHOTOS*/
+.fitems-iners {
+  padding: 24px 0 24px 0;
+  display: flex;
+  gap: 10px;
+}
+/***********************************************
+WIDTH, HEIGHT, PADDING, MARGIN FOR *ITEMS INER**/
+.w-h-pd-mr {
+  width: 25%;
+  height: 350px;
+  padding: 0 8px 0 8px;
+}
+.forH > h5 {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  color: var(--white);
+}
+.margin {
+  height: 100%;
+}
+/********************
+ICONS MAIN CONTAINER*/
+.ficon-iner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  color: var(--lighttexts);
+}
+/************************************
+FOOTER ICONS LOCATION PHONE AND MAIL*/
+.fa-location-dot,
+.fa-phone,
+.fa-envelope {
+  font-size: 17px;
+}
+/***********************
+FOLLOW US TET CONTAINER*/
+.ffollow-soc-main-iner > h5 {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 24px 0 16px 0;
+  color: var(--white);
+}
+/**********************************
+FOOTER SOCIAL MEDIA MAIN CONTAINER*/
+.footer-socmedia-iner {
+  max-width: 100%;
+  display: flex;
+  gap: 8px;
+}
+/*****************
+ALL ICONS STYLING*/
+.ficon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 46px;
+  width: 100%;
+  padding: 8px 0 8px 0;
+  font-size: 16pt;
+  color: var(--white);
+  background-color: var(--texts);
+}
+.ficon:hover {
+  transition: 0.15s ease-in-out;
+  background-color: #222c34;
+}
+.ficon:focus {
+  outline: 3.5px solid var(--texts);
+}
+.f-cosmedia {
+  width: 46px;
+  height: auto;
+}
+/****************************************
+FOOTER BUTTON AND TEXT CHANGERD STYILING*/
+.for-footer {
+  background-color: transparent !important;
+  color: var(--lighttexts);
+  font-size: 12px;
+  font-weight: normal !important;
+  word-spacing: 2px;
+  line-height: 22px;
+  width: 100%;
+  padding: 0 !important;
+}
+/***********************************************
+FOR BUTTON ADN LOREM TEXT MAIN CONTAINER MARGIN*/
+.for-margin {
+  margin-bottom: 16px;
+}
+/**********************
+FOOTER TAGS START HERE*/
+.footer-tag {
+  margin: 4px;
+  padding: 4px 8px;
+  background-color: var(--texts);
+  color: var(--white);
+}
+.f-tags-positioning-iner {
+  display: flex;
+  flex-wrap: wrap;
+  width: 105%;
+}
+.f-tags-positioning-iner > a {
+  font-weight: normal;
+}
+.footer-tag:hover {
+  transition: 0.15s ease-in-out;
+  background-color: #222c34;
+}
+.footer-tag:focus {
+  outline: 3.5px solid var(--texts);
+}
+/**************
+FLICKER PHOTOS*/
+.flicker-positioning-iner{
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.flicker-positioning-iner>img{
+  width:29%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
